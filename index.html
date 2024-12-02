@@ -70,21 +70,45 @@
       .card-footer {
         text-align: right;
       }
+      @keyframes shine {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.text-shine {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, red, white, red);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+
     </style>
-  </head>
-  <body class="bg-gray-50 text-gray-800 font-sans">
-    <!-- Header -->
-    <header class="bg-red-600 text-white py-6">
-      <div class="flex items-center justify-center">
-        <img alt="K L University Logo" class="h-16 w-16 mr-4 logo-effect" height="64" src="https://assets.onecompiler.app/42fq36qvd/42zbsafhz/Screenshot%202024-11-27%20111356.png" width="64"/>
-        <div>
-          <h1 class="text-4xl font-bold">
-            KLU ONE CALCULATORS
-          </h1>
-          <p class="text-sm mt-2">Choose Attendance, SGPA, or CGPA Calculator</p>
-        </div>
-      </div>
-    </header>
+<!-- Header -->
+<header class="bg-red-600 text-white py-6">
+  <div class="flex items-center justify-center">
+    <img
+      alt="K L University Logo"
+      class="h-16 w-16 mr-4 logo-effect"
+      height="64"
+      src="https://assets.onecompiler.app/42fq36qvd/42zbsafhz/Screenshot%202024-11-27%20111356.png"
+      width="64"
+    />
+    <div>
+      <h1 class="text-4xl font-bold">
+        KLU <span class="text-shine">ONE CALCULATORS</span>
+      </h1>
+      <p class="text-sm mt-2">Choose Attendance, SGPA, or CGPA Calculator</p>
+    </div>
+  </div>
+</header>
+
 
     <!-- Main Container -->
     <main class="max-w-lg mx-auto mt-10 bg-white shadow-lg rounded-lg p-6 space-y-8">
